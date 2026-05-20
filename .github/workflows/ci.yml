@@ -25,5 +25,7 @@ jobs:
         pip install pytest
 
     - name: Run automated tests
+      env:
+        PYTHONPATH: ${{ github.workspace }}
       run: |
         pytest
